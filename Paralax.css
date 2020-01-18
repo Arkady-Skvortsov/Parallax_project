@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	height: 100vh;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: white;
+}
+
+header {
+	box-sizing: border-box;
+	min-height: 100vh;
+	min-width: 100vw;
+	padding-top: 25%;
+    text-align: center;
+    transform-style: inherit;
+}
+
+header::before { /* Якарь на событиях */
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block;
+	transform-origin: center; /* Parallax эффект будет по середине */
+	background-image: url('img5/Parallax_img.jpg');
+	background-size: cover;
+	transition: 2s;
+	max-height: 100vh;
+	min-width: 100vw;
+	transform: translateZ(-1px) scale(2);
+}
+
+header h1 {
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+}
